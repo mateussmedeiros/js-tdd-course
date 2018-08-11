@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>03 - Const</title>
+</head>
+<body>
+
+  <script>
+    const secretNumber = 28;
+
+    const mat = {
+      name: 'Mateus',
+      age: 25
+    };
+
+    console.log(mat);
+
+    Object.freeze(mat);
+
+    mat.age = 18;
+
+    console.log(mat);
+  </script>
+</body>
+</html>
