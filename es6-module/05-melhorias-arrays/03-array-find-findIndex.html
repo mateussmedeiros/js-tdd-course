@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>03 - Array.find e Array.findIndex</title>
+  </head>
+
+  <body>
+  </body>
+
+  <script>
+    const data = [
+      {
+        name: 'Mateus',
+        age: 18,
+        city: 'Guaruja'
+      },
+      {
+        name: 'Beatriz',
+        age: 16,
+        ciy: 'Guaruja'
+      }
+    ];
+
+    //const sampleArray = [4, -5, 0, -1];
+    //const underZero = sampleArray.find(x => x < 0);
+    //const underZeroIndex = sampleArray.findIndex(x => x < 0);
+    //console.log(underZero);
+    //console.log(underZeroIndex);
+
+    const person = data.find(person => person.name === 'Mateus');
+    const personIndex = data.findIndex(person => person.name === 'Mateus');
+    console.log(person);
+    console.log(personIndex);
+  </script>
+</html>
