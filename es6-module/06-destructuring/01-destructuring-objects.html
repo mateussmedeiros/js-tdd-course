@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>01 - Destructuring Objects</title>
+  </head>
+
+  <body>
+  </body>
+
+  <script>
+    var data = {
+      name: 'Mateus',
+      surname: 'Medeiros',
+      age: 18,
+      blog: 'https://mateusmedeiros.com',
+      social: {
+        github: 'mateussmedeiros',
+        facebook: '/mateus.sousamedeiros'
+      }
+    };
+
+    const { name, surname } = data;
+    console.log(name);
+    console.log(surname);
+
+    const { github, facebook } = data.social;
+    console.log(github);
+    console.log(facebook);
+
+    const { facebook: fb } = data.social;
+    console.log(fb);
+
+    const { city = 'Guaruja' } = data;
+    console.log(city);
+  </script>
+</html>
