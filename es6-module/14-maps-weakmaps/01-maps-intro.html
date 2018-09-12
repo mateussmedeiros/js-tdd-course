@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>01 - Maps Intro</title>
+  </head>
+
+  <body>
+  </body>
+
+  <script>
+    let m = new Map();
+
+    m.set('Mateus', 18);
+    m.set('Beatriz', 16);
+    m.set('Flavio', 14);
+
+    // m.delete('Flavio');
+
+    let it = m.values();
+
+    console.log(it.next());
+
+    for (age of it) {
+      console.log(age);
+    }
+  </script>
+</html>
