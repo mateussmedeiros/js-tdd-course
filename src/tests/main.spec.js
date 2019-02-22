@@ -1,31 +1,35 @@
+var expect = require('chai').expect;
+
 describe('Main', function() {
-
-  // Roda uma vez antes do bloco
-  before(function() {
-    console.log('before');
-  });
-
-  // Roda uma vez depois do bloco
-  after(function() {
-    console.log('after');
-  });
+  var arr;
 
   // Roda todas as vezes antes de cada bloco
   beforeEach(function() {
-    console.log('beforeEach');
+    arr = [1,2,3];
   });
 
-  // Roda todas as vezes depois de cada bloco
-  afterEach(function () {
-    console.log('afterEach');
+  // testar tipos ou se existe (smoke test)
+  it('should be an array', function() {
+    expect(arr).to.be.a('array');
   });
 
-  it('Teste 1', function() {
-    console.log('Teste 1');
+  it('should have a size of 4 when push another value to the array', function() {
+    arr.push(4);
+    expect(arr).to.have.lengthOf(4);
   });
 
-  it('Teste 2', function() {
-    console.log('Teste 2');
+  it('should have a size of 2 when pop a value from the array', function() {
+    arr.pop();
+    expect(arr).to.have.lengthOf(2);
+  });
+
+  it('should return true when pop 3 from the array', function() {
+    expect(arr.pop() === 3).to.be.true;
+  });
+
+  it('should remove the value 3 when use pop in the array', function() {
+    arr.pop();
+    expect(arr).to.not.include(3);
   });
 
 });
